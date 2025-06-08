@@ -13,17 +13,15 @@
      teams are more relevant than hierarchical departments. </p> """,
 
     'author': "Zein Al-Abideen",
-    # 'website': "https://gitlab.lit-co.net/scase-odoo/scattendance",
-
     'category': 'Human Resources',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'hr_employee', 'hr_department'],
+    'depends': ['base', 'hr'],
 
     # always loaded
     'data': [
-        # 'views/hr_leave_type.xml',
+        'views/hr_employee_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
