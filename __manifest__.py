@@ -17,11 +17,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['base', 'hr', 'project'],
 
     # always loaded
     'data': [
         'views/hr_employee_view.xml',
+        'views/project_project.xml',
+        'views/task_force_views.xml',
+        'views/task_force_menu.xml',
+        'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
     'demo': [
