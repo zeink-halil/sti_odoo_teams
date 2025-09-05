@@ -7,6 +7,19 @@
             <field name="arch" type="xml">
                 <form string="Task Force">
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="open_project"
+                                    string="Project"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-puzzle-piece"
+                                    invisible="not project_id"
+                            >Project
+                                <div invisible="1">
+                                    <field name="project_id" invisible="1"/>
+                                </div>
+                            </button>
+                        </div>
                         <group>
                             <group>
                                 <field name="name"/>
@@ -23,7 +36,7 @@
             <field name="name">task.force.tree</field>
             <field name="model">task.force</field>
             <field name="arch" type="xml">
-                <tree string="Companies" sample="1" editable="bottom">
+                <tree string="Companies">
                     <field name="name"/>
                     <field name="manager_id"/>
                     <field name="members_ids" widget="many2many_tags"/>
