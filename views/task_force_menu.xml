@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+                id="menu_task_force_tree"
+                action="task_force_tree_action"
+                parent="hr.menu_config_employee"
+                sequence="5"
+                groups="hr.group_hr_user"/>
+    </data>
+</odoo>

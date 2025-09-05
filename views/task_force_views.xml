@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_task_force_form" model="ir.ui.view">
+            <field name="name">task.force.form</field>
+            <field name="model">task.force</field>
+            <field name="arch" type="xml">
+                <form string="Task Force">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="members_ids" widget="many2many_tags"/>
+                                <field name="manager_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_task_force_tree" model="ir.ui.view">
+            <field name="name">task.force.tree</field>
+            <field name="model">task.force</field>
+            <field name="arch" type="xml">
+                <tree string="Companies" sample="1" editable="bottom">
+                    <field name="name"/>
+                    <field name="manager_id"/>
+                    <field name="members_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_task_force_filter" model="ir.ui.view">
+            <field name="name">task.force.search</field>
+            <field name="model">task.force</field>
+            <field name="arch" type="xml">
+                <search string="Task Force Name">
+                    <field name="name" string="Task Force Name"/>
+                </search>
+            </field>
+        </record>
+        <record id="task_force_tree_action" model="ir.actions.act_window">
+            <field name="name">Task Force</field>
+            <field name="res_model">task.force</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- TODO:
+                * Add Kanban view with color field to recognize the team from the color
+                * Add Hierarchy view-->
+    </data>
+</odoo>
